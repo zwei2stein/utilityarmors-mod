@@ -1,0 +1,29 @@
+
+[h1]More Utility Armors[/h1]
+
+You want to have more utilities on your pawns! Why can pawn have Jump pack armor and not something else? Well, now they can!
+
+[h2]Features[/h2] 
+
+This mods adds more armor variants with utility. They combine will with any utility item in slot.
+
+[h3]Skunk Armor[/h3] 
+
+Recon armor with builtin smokepop, avialable for crafting when you research both smokepop and recon armor.
+
+[h3]Dragonslayer Armor[/h3]
+
+Marine armor with builtin firefoam popper, avialable for crafting when you research both firefoam and marine armor.
+
+[hr][/hr]
+
+[url=https://github.com/zwei2stein/utilityarmors-mod/] source code [/url] 
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3651274426] my other mods [/url] 
+
+
+[hr][/hr]
+
+[h2]Thanks[/h2]
+
+A lot of thanks to rimworld modding discord for help.

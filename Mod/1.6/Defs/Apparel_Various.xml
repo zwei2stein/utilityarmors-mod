@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- variant armors -->
+
+  <ThingDef ParentName="ApparelArmorReconBase">
+    <defName>Apparel_ArmorSkunk</defName>
+    <label>skunk armor</label>
+    <description>A variant of recon armor with an integrated defensive smokescreen. Skunk armor is slightly less protective than standard recon armor.\n\nWhen activated, it will release a cloud of smoke, obscuring incoming shots and preventing turrets from locking on.\n\nSkunks provide defensive support against ranged combat units in open terrain. Imperial snipers gain special badge of honor fot dispatching skunks.</description>
+    <statBases>
+      <ArmorRating_Sharp>0.87</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.41</ArmorRating_Heat>
+      <PackRadius>4.9</PackRadius>      
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>SmokepopBelt</li>
+        <li>ReconArmor</li>
+      </researchPrerequisites>
+      <displayPriority>125</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>UtilityArmors/SkunkArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <wornGraphicPath>UtilityArmors/SkunkArmor</wornGraphicPath>
+    </apparel>
+    <costList>
+      <Plasteel>120</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>10</Steel>
+      <Chemfuel>40</Chemfuel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>3</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountToRefill>10</ammoCountToRefill>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>smokepop</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Smokepop</verbClass>
+        <label>pop smoke</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>  
+  </ThingDef>
+
+
+  <ThingDef ParentName="ApparelArmorPowerBase">
+    <defName>Apparel_ArmorMarineDragonslayer</defName>
+    <label>dragonslayer armor</label>
+    <description>Firefighter equipment adapted to marine armor frame. The armor is slightly less protective than standard marine armor to physical damage.\n\nWhen triggered, a burst of fire-retardant foam is released, covering a wide circle around its wearer.\n\nDragonslayers form fast response units that aim to minimize civilian losses. Design was borm out of necesity during Impid rebellion, mechanoid incursions forced empire to perfect it.</description>
+    <statBases>
+      <ArmorRating_Sharp>1.01</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.20</ArmorRating_Heat>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>Firefoam</li>
+        <li>PoweredArmor</li>
+      </researchPrerequisites>
+      <displayPriority>125</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>UtilityArmors/SkunkArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <wornGraphicPath>UtilityArmors/SkunkArmor</wornGraphicPath>
+    </apparel>
+    <costList>
+      <Plasteel>120</Plasteel>
+      <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Chemfuel>70</Chemfuel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>2</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountToRefill>30</ammoCountToRefill>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>firefoam pop</chargeNoun>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Extinguish</explosiveDamageType>
+        <startWickHitPointsPercent>0</startWickHitPointsPercent>
+        <chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage> <!-- Player or AI toggled. Otherwise it won't use a charge. -->
+        <postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <explosionSound>Explosion_FirefoamPopPack</explosionSound>
+        <wickTicks>0</wickTicks>
+        <destroyThingOnExplosionSize>9999</destroyThingOnExplosionSize><!--hack to not destroy on explosion-->
+      </li>
+      <li Class="CompProperties_AIUSablePack">
+        <compClass>CompFirefoamPack</compClass>
+        <checkInterval>60</checkInterval>
+      </li>      
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_FirefoamPop</verbClass>
+        <label>pop firefoam</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+</Defs>

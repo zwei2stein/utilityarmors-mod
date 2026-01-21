@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+    <name>Utility Armors</name>
+    <author>Zwei</author>
+    <packageId>zwei.UtilityArmors</packageId>
+    <supportedVersions>
+    		<li>1.6</li>
+    </supportedVersions>
+    <modVersion>1.0</modVersion>
+    <description>Adds more variants of utility armors.</description>
+</ModMetaData>
