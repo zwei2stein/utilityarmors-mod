@@ -7,16 +7,9 @@ Steam workshop link: <https://steamcommunity.com/sharedfiles/filedetails/?id=360
 
 [Steam blurb text is in this repo](/Publishing/steam.txt)
 
-![](/Publishing/passion_inspiration.png)
+![](/Publishing/armor_dragonslayer.png)
 
-![](/Publishing/passion_break.png)
-
-![](/Publishing/trait_inspiration.png)
-
-![](/Publishing/trait_break.png)
-
-![](/Publishing/settings.png)
-
+![](/Publishing/armor_skunk.png)
 
 ## License
 
