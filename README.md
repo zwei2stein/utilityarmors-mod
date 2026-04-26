@@ -11,6 +11,14 @@ Steam workshop link: <https://steamcommunity.com/sharedfiles/filedetails/?id=360
 
 ![](/Publishing/armor_skunk.png)
 
+![](/Publishing/armor_palisade.png)
+
+![](/Publishing/helm_abductor.png)
+
+![](/Publishing/helm_iudash.png)
+
+![](/Publishing/helm_pharos.png)
+
 ## License
 
 All original artwork included is Copyright © 2025, 2026 Petr Prokop, and distributed under the Creative Commons License Attribution-ShareAlike 4.0 International, or CC-BY-SA 4.0I.

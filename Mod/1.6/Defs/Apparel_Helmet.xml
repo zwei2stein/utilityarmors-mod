@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- variant armors -->
+
+  <ThingDef ParentName="ApparelArmorHelmetReconBase">
+    <defName>Apparel_ArmorHelmetReconIudas</defName>
+    <label>iudash recon helmet</label>
+    <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nIudash variant has built-in psychic effector. It overwhelms the target's mind with terrifying perceptual distortions, driving them into a berserk state. There is a risk of brain damage.\n\nNamed after Iudash, mythical traitor and trickster god.</description>
+    <graphicData>
+      <texPath>UtilityArmors/IudashHelmet</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>InsanityWeaponry</li>
+        <li>ReconArmor</li>
+      </researchPrerequisites>
+    </recipeMaker>
+
+    <statBases>
+      <WorkToMake>31500</WorkToMake>
+    </statBases>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>30</Plasteel>
+      <Shard>1</Shard>
+      <Bioferrite>75</Bioferrite>
+    </costList>
+    <apparel>
+      <wornGraphicPath>UtilityArmors/IudashHelmet</wornGraphicPath>
+      <forceEyesVisibleForRotations>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </forceEyesVisibleForRotations>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    <recipeMaker>
+      <displayPriority>140</displayPriority>
+    </recipeMaker>
+
+
+    <verbs>
+      <li>
+        <verbClass>Verb_CastTargetEffectLances</verbClass>
+        <label>iudash recon helmet</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <onlyManualCast>True</onlyManualCast>
+        <range>16.9</range>
+        <warmupTime>1.4</warmupTime>
+        <invalidTargetPawn>psychic insanity immune</invalidTargetPawn>
+        <targetParams>
+          <canTargetBuildings>false</canTargetBuildings>
+          <neverTargetIncapacitated>true</neverTargetIncapacitated>
+        </targetParams>
+        <soundCast>PsychicInsanityLanceCast</soundCast>
+        <soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <hotKey>Misc4</hotKey>
+        <soundReload>Standard_Reload</soundReload>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <maxCharges>1</maxCharges>
+        <ammoDef>Shard</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <chargeNoun>shock</chargeNoun>
+      </li>
+      <li>
+        <compClass>CompTargetEffect_Berserk</compClass>
+      </li>
+      <li Class="CompProperties_TargetEffect_BrainDamageChance">
+        <brainDamageChance>0.3</brainDamageChance>
+      </li>
+      <li Class="CompProperties_TargetEffect_GoodwillImpact">
+        <goodwillImpact>-200</goodwillImpact>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckConnecting">
+        <fleckDef>PsycastPsychicLine</fleckDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
+
+  </ThingDef>
+
+
+  <ThingDef ParentName="ApparelArmorHelmetPowerBase">
+    <defName>Apparel_ArmorMarineHelmetAbductor</defName>
+    <label>abductor marine helmet</label>
+    <description>A marine armor helmet, with a built-in status computer and layered plasteel-weave plates.\n\nAbductor variant has built-in psychic effector. It shocks the target's mind with chaotic images, blocking coherent perception and dropping them into a state of psychic shock. There is a risk of brain damage.\n\nCanibal pirates favorite way of sourcing tasty Yttakin.</description>
+    <graphicData>
+      <texPath>UtilityArmors/AbductorHelmet</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>InsanityWeaponry</li>
+        <li>PoweredArmor</li>
+      </researchPrerequisites>
+    </recipeMaker>
+
+    <statBases>
+      <WorkToMake>42000</WorkToMake>
+    </statBases>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>40</Plasteel>
+      <Shard>1</Shard>
+      <Bioferrite>60</Bioferrite>
+    </costList>
+
+    <apparel>
+      <wornGraphicPath>UtilityArmors/AbductorHelmet</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <forceEyesVisibleForRotations>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </forceEyesVisibleForRotations>
+    </apparel>
+
+    <recipeMaker>
+      <displayPriority>150</displayPriority>
+    </recipeMaker>
+
+    <verbs>
+      <li>
+        <verbClass>Verb_CastTargetEffectLances</verbClass>
+        <label>abductor marine helmet</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <onlyManualCast>True</onlyManualCast>
+        <range>16.9</range>
+        <warmupTime>1.4</warmupTime>
+        <invalidTargetPawn>psychic shock immune</invalidTargetPawn>
+        <targetParams>
+          <canTargetBuildings>false</canTargetBuildings>
+          <neverTargetIncapacitated>true</neverTargetIncapacitated>
+        </targetParams>
+        <soundCast>PsychicShockLanceCast</soundCast>
+        <soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <hotKey>Misc4</hotKey>
+        <soundReload>Standard_Reload</soundReload>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <maxCharges>1</maxCharges>
+        <ammoDef>Shard</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <chargeNoun>shock</chargeNoun>
+      </li>
+      <li>
+        <compClass>CompTargetEffect_PsychicShock</compClass>
+      </li>
+      <li Class="CompProperties_TargetEffect_BrainDamageChance">
+        <brainDamageChance>0.3</brainDamageChance>
+      </li>
+      <li Class="CompProperties_TargetEffect_GoodwillImpact">
+        <goodwillImpact>-200</goodwillImpact>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckConnecting">
+        <fleckDef>PsycastPsychicLine</fleckDef>
+      </li>
+      <li Class="CompProperties_Styleable" />
+    </comps>
+
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="ApparelArmorHelmetCataphractBase">
+    <defName>Apparel_ArmorHelmetCataphractPharos</defName>
+    <label>pharos catapharact helmet</label>
+    <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nPharos variant includes short range deployable flares linked to aim assistace system for fast deployment, but short range.\n\nPharos units saw unprecedented use in clearing anomalous space stations of cult which dabbled in dark archotech.</description>
+
+    <mergeVerbGizmos>false</mergeVerbGizmos>
+
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>CataphractArmor</li>
+        <li>DisruptorFlares</li>
+      </researchPrerequisites>
+      <displayPriority>120</displayPriority>
+    </recipeMaker>
+
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <Bioferrite>30</Bioferrite>      
+    </costList>
+
+    <graphicData>
+      <texPath>UtilityArmors/PharosHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>UtilityArmors/PharosHelmet</wornGraphicPath>
+    </apparel>    
+
+    <comps>
+      <li Class="CompProperties_DisruptorFlarePack">
+        <checkInterval>60</checkInterval>
+        <fieldRadius>8.9</fieldRadius>
+        <durationSeconds>30</durationSeconds>
+      </li>
+      <li Class="CompProperties_ApparelReloadable">
+        <hotKey>Misc4</hotKey>
+        <soundReload>Standard_Reload</soundReload>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <maxCharges>4</maxCharges>
+        <ammoDef>Bioferrite</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <chargeNoun>flare</chargeNoun>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectileStaticPsychic</verbClass>
+        <label>deploy flare</label>
+        <defaultProjectile>Grenade_DisruptorFlare</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>10</range>
+        <burstShotCount>1</burstShotCount>
+        <onlyManualCast>true</onlyManualCast>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <violent>false</violent>
+        <targetParams>
+          <canTargetPawns>false</canTargetPawns>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>FlareLaunch</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <canGoWild>false</canGoWild>
+        <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor><!-- Keep in sync with PlaceWorker_GlowRadius.RingColor -->
+      </li>
+    </verbs>
+
+  </ThingDef>
+
+
+</Defs>

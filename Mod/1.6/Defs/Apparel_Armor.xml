@@ -135,4 +135,53 @@
   </ThingDef>
 
 
+  <ThingDef ParentName="ApparelArmorCataphractBase">
+    <defName>Apparel_ArmorCataphractPalisade</defName>
+    <label>palisade armor</label>
+    <description>A variant of cataphract armor with a shield unit. This armor is slightly less protective than standard cataphract armor against normal damage, but it makes up for that with shield unit.\n\nPalisade overwhelms ranks of ranged attackers with simple blunt force and resistence to projectiles.\n\nPalisade Pals was infamous mercenary group, specializing in bodyguard tasks. They con-finaced development of armored suits their clients would be able to wear. But first time it was used, shield was confogigured for maximum safety, not letting even air to pass though: trapping unfortunate Archon just long enough to suffocate.</description>
+    <statBases>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.75</ArmorRating_Heat>
+
+      <EnergyShieldRechargeRate>0.17</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <equippedStatOffsets>
+      <Flammability>-0.68</Flammability>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>50</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Plasteel>170</Plasteel>
+      <Uranium>50</Uranium>
+      <BroadshieldCore>1</BroadshieldCore>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>ShieldBelt</li>
+        <li>CataphractArmor</li>        
+      </researchPrerequisites>
+    </recipeMaker>
+    <graphicData>
+      <texPath>UtilityArmors/PalisadeArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <wornGraphicPath>UtilityArmors/PalisadeArmor</wornGraphicPath>
+    </apparel>
+    <comps>
+      <li Class="CompProperties_Shield" />
+    </comps>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    <recipeMaker>
+      <displayPriority>135</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
 </Defs>
