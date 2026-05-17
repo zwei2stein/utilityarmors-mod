@@ -6,7 +6,7 @@ You want to stack more utilities on your pawns? Why can pawn have Jump pack armo
 [h2]Features[/h2] 
 
 [list]
-    [*]This mods adds more armor variants with utility function.
+    [*]This mods adds more armor and helmet variants with utility function.
 [/list]
 
 [h3]Skunk Armor[/h3] 
@@ -28,6 +28,10 @@ Marine armor helmet with builtin shard shock lance, avialable for crafting when 
 [h3]Palisade Armor[/h3]
 
 Cataphract armor with builtin shield, avialable for crafting when you research both shields and cataphract armor. 
+
+[h3]Shelter Armor[/h3]
+
+Cataphract armor with builtin deployable low-shield bubble, avialable for crafting when you research both shields and cataphract armor. 
 
 [h3]Pharos Helmer[/h3]
 

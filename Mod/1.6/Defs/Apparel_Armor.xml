@@ -184,4 +184,70 @@
     </recipeMaker>
   </ThingDef>
 
+
+  <ThingDef ParentName="ApparelArmorCataphractBase">
+    <defName>Apparel_ArmorCataphractShelter</defName>
+    <label>shelter armor</label>
+    <description>A variant of cataphract armor with a deployable low-shield projector. This armor is slightly less protective than standard cataphract armor against normal damage, but it makes up for that with deployable low-shield projector. Deployed, it generates a circular shield that allows bullets out but not in. The unit is designed to last only a short time before burning out.\n\nShelter armor users provide shelter for their allies.\n\nShelter usage was not favord by imperial soldiers. They did not like hanging out in backlines, heavily armored, bein implied weakling. But that was misunderstanding of doctrine - Shelter should deploy shield bubble and then charge enemy formation, not stay cowardly inside said bubble.</description>
+    <statBases>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.75</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <Flammability>-0.68</Flammability>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>50</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Plasteel>170</Plasteel>
+      <Uranium>50</Uranium>
+      <BroadshieldCore>1</BroadshieldCore>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>ShieldBelt</li>
+        <li>CataphractArmor</li>        
+      </researchPrerequisites>
+    </recipeMaker>
+    <graphicData>
+      <texPath>UtilityArmors/PalisadeArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <wornGraphicPath>UtilityArmors/PalisadeArmor</wornGraphicPath>
+    </apparel>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>1</maxCharges>
+        <ammoDef>BroadshieldCore</ammoDef>
+        <ammoCountToRefill>1</ammoCountToRefill>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>shield</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_DeployBroadshield</verbClass>
+        <label>deploy low-shield</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>    
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    <recipeMaker>
+      <displayPriority>135</displayPriority>
+    </recipeMaker>
+  </ThingDef>  
+
 </Defs>
