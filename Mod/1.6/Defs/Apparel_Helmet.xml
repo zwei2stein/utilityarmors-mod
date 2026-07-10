@@ -3,7 +3,7 @@
 
   <!-- variant armors -->
 
-  <ThingDef ParentName="ApparelArmorHelmetReconBase">
+  <ThingDef ParentName="ApparelArmorHelmetReconBase" MayRequire="Ludeon.RimWorld.Anomaly">
     <defName>Apparel_ArmorHelmetReconIudas</defName>
     <label>iudash recon helmet</label>
     <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nThe Iudash variant has a built-in psychic effector. It overwhelms the target's mind with terrifying perceptual distortions, driving them into a berserk state. There is a risk of brain damage.\n\nNamed after Iudash, mythical traitor and trickster god.</description>
@@ -93,7 +93,7 @@
 
   </ThingDef>
 
-  <ThingDef ParentName="ApparelArmorHelmetPowerBase">
+  <ThingDef ParentName="ApparelArmorHelmetPowerBase" MayRequire="Ludeon.RimWorld.Anomaly">
     <defName>Apparel_ArmorMarineHelmetAbductor</defName>
     <label>abductor marine helmet</label>
     <description>A Marine armor helmet, with a built-in status computer and layered plasteel-weave plates.\n\nThe Abductor variant has a built-in psychic effector. It shocks the target's mind with chaotic images, blocking coherent perception and dropping them into a state of psychic shock. There is a risk of brain damage.\n\nCannibal pirates' favorite way of sourcing tasty Yttakin.</description>
@@ -181,7 +181,7 @@
 
   </ThingDef>
 
-  <ThingDef ParentName="ApparelArmorHelmetCataphractBase">
+  <ThingDef ParentName="ApparelArmorHelmetCataphractBase" MayRequire="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Royalty">
     <defName>Apparel_ArmorHelmetCataphractPharos</defName>
     <label>pharos catapharact helmet</label>
     <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nThe Pharos variant includes short-range deployable flares linked to an aim assist system for fast deployment, but with a short range.\n\nPharos units saw unprecedented use in clearing anomalous space stations of cults that dabbled in dark archotech.</description>
