@@ -8,31 +8,39 @@ You want to stack more utilities on your pawns? Why can a pawn have Jump pack, a
     [*]This mod adds more armor and helmet variants with utility functions.
 [/list]
 
-[h3]Skunk Armor[/h3]
+[h3]Core[/h3]
+
+[b]Skunk Armor[/b]
 
 Recon armor with built-in Smokepop, available for crafting when you research both Smokepop and Recon armor.
 
-[h3]Iudash Helmet[/h3]
-
-Recon helmet with built-in Shard insanity lance, available for crafting when you research both Insanity weaponry and Recon armor.
-
-[h3]Dragonslayer Armor[/h3]
+[b]Dragonslayer Armor[/b]
 
 Marine armor with built-in Firefoam popper, available for crafting when you research both Firefoam and Marine armor.
 
-[h3]Abductor Helmet[/h3]
+[h3]With Royalty[/h3]
 
-Marine armor helmet with built-in Shard shock lance, available for crafting when you research both Insanity weaponry and Marine armor.
-
-[h3]Palisade Armor[/h3]
+[b]Palisade Armor[/b]
 
 Cataphract armor with built-in shield, available for crafting when you research both Shields and Cataphract armor.
 
-[h3]Shelter Armor[/h3]
+[b]Shelter Armor[/b]
 
 Cataphract armor with built-in deployable low-shield bubble, available for crafting when you research both Shields and Cataphract armor.
 
-[h3]Pharos Helmet[/h3]
+[h3]With Anomaly[/h3]
+
+[b]Iudash Helmet[/b]
+
+Recon helmet with built-in Shard insanity lance, available for crafting when you research both Insanity weaponry and Recon armor.
+
+[b]Abductor Helmet[/b]
+
+Marine armor helmet with built-in Shard shock lance, available for crafting when you research both Insanity weaponry and Marine armor.
+
+[h3]With Royalty & Anomaly[/h3]
+
+[b]Pharos Helmet[/b]
 
 Cataphract armor helmet with built-in disruptor flare launcher, available for crafting when you research both Disruptor flares and Cataphract armor.
 

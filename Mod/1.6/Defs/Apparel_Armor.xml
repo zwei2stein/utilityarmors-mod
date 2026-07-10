@@ -133,7 +133,7 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="ApparelArmorCataphractBase">
+  <ThingDef ParentName="ApparelArmorCataphractBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Apparel_ArmorCataphractPalisade</defName>
     <label>palisade armor</label>
     <description>A variant of Cataphract armor with a shield unit. This armor is slightly less protective than standard Cataphract armor against normal damage, but it makes up for that with a shield unit.\n\nPalisades overwhelm ranks of ranged attackers with simple blunt force and resistance to projectiles.\n\nThe Palisade Pals were an infamous mercenary group, specializing in bodyguard tasks. They co-financed the development of armored suits their clients would be able to wear. But the first time it was used, the shield was configured for maximum safety, not letting even air pass through, trapping an unfortunate Archon just long enough to suffocate.</description>
@@ -181,7 +181,7 @@
     </recipeMaker>
   </ThingDef>
 
-  <ThingDef ParentName="ApparelArmorCataphractBase">
+  <ThingDef ParentName="ApparelArmorCataphractBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Apparel_ArmorCataphractShelter</defName>
     <label>shelter armor</label>
     <description>A variant of Cataphract armor with a deployable low-shield projector. This armor is slightly less protective than standard Cataphract armor against normal damage, but it makes up for that with a deployable low-shield projector. Deployed, it generates a circular shield that allows bullets out but not in. The unit is designed to last only a short time before burning out.\n\nShelter armor users provide shelter for their allies.\n\nShelter usage was not favored by Imperial soldiers. They did not like hanging out in the backlines, heavily armored, being implied weaklings. But that was a misunderstanding of doctrine—Shelter should deploy a shield bubble and then charge the enemy formation, not stay cowardly inside said bubble.</description>

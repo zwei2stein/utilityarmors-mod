@@ -6,6 +6,6 @@
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
-    <modVersion>1.2.2</modVersion>
+    <modVersion>1.2.3</modVersion>
     <description>Adds armor and helmet variants with built-in utility.</description>
 </ModMetaData>
