@@ -4,8 +4,8 @@
     <author>Zwei</author>
     <packageId>zwei.UtilityArmors</packageId>
     <supportedVersions>
-      <li>1.6</li>
+        <li>1.6</li>
     </supportedVersions>
-    <modVersion>1.2.1</modVersion>
-    <description>Adds more variants of utility armors.</description>
+    <modVersion>1.2.2</modVersion>
+    <description>Adds armor and helmet variants with built-in utility.</description>
 </ModMetaData>

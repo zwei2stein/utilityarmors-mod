@@ -6,7 +6,7 @@
   <ThingDef ParentName="ApparelArmorHelmetReconBase">
     <defName>Apparel_ArmorHelmetReconIudas</defName>
     <label>iudash recon helmet</label>
-    <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nIudash variant has built-in psychic effector. It overwhelms the target's mind with terrifying perceptual distortions, driving them into a berserk state. There is a risk of brain damage.\n\nNamed after Iudash, mythical traitor and trickster god.</description>
+    <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nThe Iudash variant has a built-in psychic effector. It overwhelms the target's mind with terrifying perceptual distortions, driving them into a berserk state. There is a risk of brain damage.\n\nNamed after Iudash, mythical traitor and trickster god.</description>
     <graphicData>
       <texPath>UtilityArmors/IudashHelmet</texPath>
       <shaderType>CutoutComplex</shaderType>
@@ -44,7 +44,6 @@
     <recipeMaker>
       <displayPriority>140</displayPriority>
     </recipeMaker>
-
 
     <verbs>
       <li>
@@ -94,11 +93,10 @@
 
   </ThingDef>
 
-
   <ThingDef ParentName="ApparelArmorHelmetPowerBase">
     <defName>Apparel_ArmorMarineHelmetAbductor</defName>
     <label>abductor marine helmet</label>
-    <description>A marine armor helmet, with a built-in status computer and layered plasteel-weave plates.\n\nAbductor variant has built-in psychic effector. It shocks the target's mind with chaotic images, blocking coherent perception and dropping them into a state of psychic shock. There is a risk of brain damage.\n\nCanibal pirates favorite way of sourcing tasty Yttakin.</description>
+    <description>A Marine armor helmet, with a built-in status computer and layered plasteel-weave plates.\n\nThe Abductor variant has a built-in psychic effector. It shocks the target's mind with chaotic images, blocking coherent perception and dropping them into a state of psychic shock. There is a risk of brain damage.\n\nCannibal pirates' favorite way of sourcing tasty Yttakin.</description>
     <graphicData>
       <texPath>UtilityArmors/AbductorHelmet</texPath>
       <shaderType>CutoutComplex</shaderType>
@@ -182,12 +180,11 @@
     </comps>
 
   </ThingDef>
-  
-  
+
   <ThingDef ParentName="ApparelArmorHelmetCataphractBase">
     <defName>Apparel_ArmorHelmetCataphractPharos</defName>
     <label>pharos catapharact helmet</label>
-    <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nPharos variant includes short range deployable flares linked to aim assistace system for fast deployment, but short range.\n\nPharos units saw unprecedented use in clearing anomalous space stations of cult which dabbled in dark archotech.</description>
+    <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nThe Pharos variant includes short-range deployable flares linked to an aim assist system for fast deployment, but with a short range.\n\nPharos units saw unprecedented use in clearing anomalous space stations of cults that dabbled in dark archotech.</description>
 
     <mergeVerbGizmos>false</mergeVerbGizmos>
 
@@ -203,7 +200,7 @@
       <ComponentSpacer>1</ComponentSpacer>
       <Plasteel>50</Plasteel>
       <ComponentIndustrial>1</ComponentIndustrial>
-      <Bioferrite>30</Bioferrite>      
+      <Bioferrite>30</Bioferrite>
     </costList>
 
     <graphicData>
@@ -213,7 +210,7 @@
 
     <apparel>
       <wornGraphicPath>UtilityArmors/PharosHelmet</wornGraphicPath>
-    </apparel>    
+    </apparel>
 
     <comps>
       <li Class="CompProperties_DisruptorFlarePack">
@@ -257,6 +254,5 @@
     </verbs>
 
   </ThingDef>
-
 
 </Defs>

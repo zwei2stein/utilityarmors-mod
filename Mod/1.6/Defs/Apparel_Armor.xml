@@ -6,12 +6,12 @@
   <ThingDef ParentName="ApparelArmorReconBase">
     <defName>Apparel_ArmorSkunk</defName>
     <label>skunk armor</label>
-    <description>A variant of recon armor with an integrated defensive smokescreen. Skunk armor is slightly less protective than standard recon armor.\n\nWhen activated, it will release a cloud of smoke, obscuring incoming shots and preventing turrets from locking on.\n\nSkunks provide defensive support against ranged combat units in open terrain. Imperial snipers gain special badge of honor fot dispatching skunks.</description>
+    <description>A variant of Recon armor with a built-in Smokepop. Skunk armor is slightly less protective than standard Recon armor.\n\nWhen activated, it releases a cloud of smoke, obscuring incoming shots and preventing turrets from locking on.\n\nSkunks provide defensive support against ranged combat units in open terrain. Imperial snipers gain a special badge of honor for dispatching skunks.</description>
     <statBases>
       <ArmorRating_Sharp>0.87</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
       <ArmorRating_Heat>0.41</ArmorRating_Heat>
-      <PackRadius>4.9</PackRadius>      
+      <PackRadius>4.9</PackRadius>
     </statBases>
     <recipeMaker>
       <researchPrerequisites>
@@ -56,14 +56,13 @@
         <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
         <onlyManualCast>True</onlyManualCast>
       </li>
-    </verbs>  
+    </verbs>
   </ThingDef>
-
 
   <ThingDef ParentName="ApparelArmorPowerBase">
     <defName>Apparel_ArmorMarineDragonslayer</defName>
     <label>dragonslayer armor</label>
-    <description>Firefighter equipment adapted to marine armor frame. The armor is slightly less protective than standard marine armor to physical damage.\n\nWhen triggered, a burst of fire-retardant foam is released, covering a wide circle around its wearer.\n\nDragonslayers form fast response units that aim to minimize civilian losses. Design was borm out of necesity during Impid rebellion, mechanoid incursions forced empire to perfect it.</description>
+    <description>Firefighter equipment adapted to Marine armor frame. The armor is slightly less protective than standard Marine armor against physical damage.\n\nWhen triggered, a burst of fire-retardant foam is released, covering a wide circle around its wearer.\n\nDragonslayers form fast response units that aim to minimize civilian losses. The design was born out of necessity during the Impid rebellion. Mechanoid incursions forced the Empire to perfect it.</description>
     <statBases>
       <ArmorRating_Sharp>1.01</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
@@ -119,7 +118,7 @@
       <li Class="CompProperties_AIUSablePack">
         <compClass>CompFirefoamPack</compClass>
         <checkInterval>60</checkInterval>
-      </li>      
+      </li>
     </comps>
     <verbs>
       <li>
@@ -134,16 +133,14 @@
     </verbs>
   </ThingDef>
 
-
   <ThingDef ParentName="ApparelArmorCataphractBase">
     <defName>Apparel_ArmorCataphractPalisade</defName>
     <label>palisade armor</label>
-    <description>A variant of cataphract armor with a shield unit. This armor is slightly less protective than standard cataphract armor against normal damage, but it makes up for that with shield unit.\n\nPalisade overwhelms ranks of ranged attackers with simple blunt force and resistence to projectiles.\n\nPalisade Pals was infamous mercenary group, specializing in bodyguard tasks. They con-finaced development of armored suits their clients would be able to wear. But first time it was used, shield was confogigured for maximum safety, not letting even air to pass though: trapping unfortunate Archon just long enough to suffocate.</description>
+    <description>A variant of Cataphract armor with a shield unit. This armor is slightly less protective than standard Cataphract armor against normal damage, but it makes up for that with a shield unit.\n\nPalisades overwhelm ranks of ranged attackers with simple blunt force and resistance to projectiles.\n\nThe Palisade Pals were an infamous mercenary group, specializing in bodyguard tasks. They co-financed the development of armored suits their clients would be able to wear. But the first time it was used, the shield was configured for maximum safety, not letting even air pass through, trapping an unfortunate Archon just long enough to suffocate.</description>
     <statBases>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
       <ArmorRating_Heat>0.75</ArmorRating_Heat>
-
       <EnergyShieldRechargeRate>0.17</EnergyShieldRechargeRate>
       <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
     </statBases>
@@ -162,7 +159,7 @@
     <recipeMaker>
       <researchPrerequisites>
         <li>ShieldBelt</li>
-        <li>CataphractArmor</li>        
+        <li>CataphractArmor</li>
       </researchPrerequisites>
     </recipeMaker>
     <graphicData>
@@ -184,11 +181,10 @@
     </recipeMaker>
   </ThingDef>
 
-
   <ThingDef ParentName="ApparelArmorCataphractBase">
     <defName>Apparel_ArmorCataphractShelter</defName>
     <label>shelter armor</label>
-    <description>A variant of cataphract armor with a deployable low-shield projector. This armor is slightly less protective than standard cataphract armor against normal damage, but it makes up for that with deployable low-shield projector. Deployed, it generates a circular shield that allows bullets out but not in. The unit is designed to last only a short time before burning out.\n\nShelter armor users provide shelter for their allies.\n\nShelter usage was not favord by imperial soldiers. They did not like hanging out in backlines, heavily armored, bein implied weakling. But that was misunderstanding of doctrine - Shelter should deploy shield bubble and then charge enemy formation, not stay cowardly inside said bubble.</description>
+    <description>A variant of Cataphract armor with a deployable low-shield projector. This armor is slightly less protective than standard Cataphract armor against normal damage, but it makes up for that with a deployable low-shield projector. Deployed, it generates a circular shield that allows bullets out but not in. The unit is designed to last only a short time before burning out.\n\nShelter armor users provide shelter for their allies.\n\nShelter usage was not favored by Imperial soldiers. They did not like hanging out in the backlines, heavily armored, being implied weaklings. But that was a misunderstanding of doctrine—Shelter should deploy a shield bubble and then charge the enemy formation, not stay cowardly inside said bubble.</description>
     <statBases>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
@@ -208,7 +204,7 @@
     <recipeMaker>
       <researchPrerequisites>
         <li>ShieldBelt</li>
-        <li>CataphractArmor</li>        
+        <li>CataphractArmor</li>
       </researchPrerequisites>
     </recipeMaker>
     <graphicData>
@@ -241,13 +237,13 @@
         <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
         <onlyManualCast>True</onlyManualCast>
       </li>
-    </verbs>    
+    </verbs>
     <tradeTags>
       <li>Armor</li>
     </tradeTags>
     <recipeMaker>
       <displayPriority>135</displayPriority>
     </recipeMaker>
-  </ThingDef>  
+  </ThingDef>
 
 </Defs>

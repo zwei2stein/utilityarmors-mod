@@ -1,50 +1,49 @@
-
 [h1]More Utility Armors[/h1]
 
-You want to stack more utilities on your pawns? Why can pawn have Jump pack armor and not something else? Well, now they can!
+You want to stack more utilities on your pawns? Why can a pawn have Jump pack, armor and not something else? Well, now they can!
 
-[h2]Features[/h2] 
+[h2]Features[/h2]
 
 [list]
-    [*]This mods adds more armor and helmet variants with utility function.
+    [*]This mod adds more armor and helmet variants with utility functions.
 [/list]
 
-[h3]Skunk Armor[/h3] 
+[h3]Skunk Armor[/h3]
 
-Recon armor with builtin smokepop, avialable for crafting when you research both smokepop and recon armor.
+Recon armor with built-in Smokepop, available for crafting when you research both Smokepop and Recon armor.
 
-[h3]Iudash helmet[/h3]
+[h3]Iudash Helmet[/h3]
 
-Recon helmet with builtin shard insanity lance, avialable for crafting when you research both insanity weaponry and recon armor.
+Recon helmet with built-in Shard insanity lance, available for crafting when you research both Insanity weaponry and Recon armor.
 
 [h3]Dragonslayer Armor[/h3]
 
-Marine armor with builtin firefoam popper, avialable for crafting when you research both firefoam and marine armor.
+Marine armor with built-in Firefoam popper, available for crafting when you research both Firefoam and Marine armor.
 
 [h3]Abductor Helmet[/h3]
 
-Marine armor helmet with builtin shard shock lance, avialable for crafting when you research both insanity weaponry and marine armor.
+Marine armor helmet with built-in Shard shock lance, available for crafting when you research both Insanity weaponry and Marine armor.
 
 [h3]Palisade Armor[/h3]
 
-Cataphract armor with builtin shield, avialable for crafting when you research both shields and cataphract armor. 
+Cataphract armor with built-in shield, available for crafting when you research both Shields and Cataphract armor.
 
 [h3]Shelter Armor[/h3]
 
-Cataphract armor with builtin deployable low-shield bubble, avialable for crafting when you research both shields and cataphract armor. 
+Cataphract armor with built-in deployable low-shield bubble, available for crafting when you research both Shields and Cataphract armor.
 
-[h3]Pharos Helmer[/h3]
+[h3]Pharos Helmet[/h3]
 
-Cataphract armor with builtin disruptor flare launger, avialable for crafting when you research both disruptor flares and cataphract armor. 
+Cataphract armor helmet with built-in disruptor flare launcher, available for crafting when you research both Disruptor flares and Cataphract armor.
 
 [hr][/hr]
 
-[url=https://github.com/zwei2stein/utilityarmors-mod/]source code[/url] 
+[url=https://github.com/zwei2stein/utilityarmors-mod/]Source Code[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3651274426] my other mods [/url] 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3651274426]My Other Mods[/url]
 
 [hr][/hr]
 
 [h2]Thanks[/h2]
 
-A lot of thanks to rimworld modding discord for help.
+Many thanks to the RimWorld Modding Discord for their help.
