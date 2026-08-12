@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Utility Armors - Features</title>
+    <style>
+        :root {
+            --rimworld-bg-dark: #1b2838;
+            --rimworld-bg-darker: #111827;
+            --rimworld-bg-panel: #243447;
+            --rimworld-bg-panel-light: #2a3e50;
+            --rimworld-text: #d4d4d4;
+            --rimworld-text-muted: #9a9a9a;
+            --rimworld-text-bright: #ffffff;
+            --rimworld-accent-gold: #c0774d;
+            --rimworld-accent-blue: #4a90d9;
+            --rimworld-accent-purple: #c077d4;
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--rimworld-bg-darker);
+            color: var(--rimworld-text);
+            line-height: 1.6;
+            padding: var(--spacing-lg);
+        }
+
+        .feature-table {
+            width: 950px;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--rimworld-bg-panel);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .feature-table tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .feature-table tr:last-child { border-bottom: none; }
+        .feature-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+        .feature-table th {
+            padding: var(--spacing-md) var(--spacing-lg);
+            text-align: left;
+            font-size: 0.9em;
+            color: var(--rimworld-accent-gold);
+            font-weight: 600;
+            background: rgba(0,0,0,0.2);
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .cell-graphic {
+            width: 140px;
+            padding: var(--spacing-md);
+            text-align: center;
+            vertical-align: middle;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .cell-graphic img {
+            max-width: 120px;
+            max-height: 120px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.5));
+        }
+
+        .cell-description {
+            padding: var(--spacing-md) var(--spacing-lg);
+            vertical-align: middle;
+            width: 40%;
+        }
+
+        .cell-description h3 {
+            font-size: 1.1em;
+            color: var(--rimworld-text-bright);
+            margin-bottom: var(--spacing-xs);
+            font-weight: 600;
+        }
+
+        .cell-description p {
+            font-size: 0.9em;
+            color: var(--rimworld-text-muted);
+            line-height: 1.5;
+        }
+
+        .cell-cost {
+            width: 25%;
+            padding: var(--spacing-md) var(--spacing-lg);
+            vertical-align: middle;
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cost-table td {
+            padding: 2px 4px;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        .cost-table .amount {
+            color: var(--rimworld-text-bright);
+            font-weight: 600;
+            width: 25%;
+        }
+
+        .cost-table .material {
+            color: var(--rimworld-text);
+            text-align: left;
+            width: 50%;
+        }
+
+        .cost-table .icon {
+            width: 25%;
+        }
+
+        .cell-stats {
+            width: 25%;
+            padding: var(--spacing-md) var(--spacing-lg);
+            vertical-align: middle;
+        }
+
+        .stats-list {
+            list-style: none;
+            font-size: 0.85em;
+        }
+
+        .stats-list li {
+            padding: var(--spacing-xs) 0;
+            position: relative;
+            padding-left: var(--spacing-md);
+            color: var(--rimworld-text-muted);
+        }
+
+        .stats-list li::before {
+            content: '\2022';
+            position: absolute;
+            left: 0;
+            color: var(--rimworld-accent-gold);
+            font-size: 0.8em;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px 0;
+            border-radius: var(--radius-sm);
+            font-size: 0.75em;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-research {
+            background: rgba(208, 119, 45, 0.15);
+            border: 1px solid var(--rimworld-accent-gold);
+            color: var(--rimworld-accent-gold);
+        }
+
+        .tag-dlc {
+            background: rgba(74, 144, 217, 0.2);
+            border: 1px solid var(--rimworld-accent-blue);
+            color: var(--rimworld-accent-blue);
+        }
+
+        /* Material Icons */
+        .icon-material {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .icon-steel { background: linear-gradient(135deg, #a8a8a8, #d4d4d4); }
+        .icon-plasteel { background: linear-gradient(135deg, #6ab0d9, #8ec8e8); }
+        .icon-component-industrial { background: linear-gradient(135deg, #4a8d4a, #6ab06a); }
+        .icon-component-spacer { background: linear-gradient(135deg, #6a4a8d, #8a6ab0); }
+        .icon-chemfuel { background: linear-gradient(135deg, #d98d4a, #e8a86a); }
+        .icon-uranium { background: linear-gradient(135deg, #4ad96a, #6ae88a); }
+        .icon-broadshield-core { background: linear-gradient(135deg, #8da8d9, #a8c8e8); }
+        .icon-shard { background: linear-gradient(135deg, #d96a8d, #e88aa8); }
+        .icon-bioferrite { background: linear-gradient(135deg, #8d4a4a, #a86a6a); }
+    </style>
+</head>
+<body>
+<table class="feature-table">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Description</th>
+        <th>Cost</th>
+        <th>Features & Stats</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <!-- SKUNK ARMOR -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/SkunkArmor.png" alt="Skunk Armor">
+        </td>
+        <td class="cell-description">
+            <h3>Skunk Armor</h3>
+            <p>A variant of Recon armor with a built-in <strong>Smokepop</strong>. When activated, it releases a cloud of smoke, obscuring incoming shots and preventing turrets from locking on. Slightly less protective than standard Recon armor.</p>
+            <div><span class="tag tag-research">Requires: Smokepop Belt + Recon Armor</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">120</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">10</td><td class="material">Steel</td><td class="icon"><span class="icon-material icon-steel"></span></td></tr>
+                <tr><td class="amount">3</td><td class="material">Component</td><td class="icon"><span class="icon-material icon-component-industrial"></span></td></tr>
+                <tr><td class="amount">40</td><td class="material">Chemfuel</td><td class="icon"><span class="icon-material icon-chemfuel"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>3 smokepop charges</strong></li>
+                <li>Refills with 10 Chemfuel</li>
+                <li><strong>Obscures vision</strong></li>
+                <li><strong>Blocks turret targeting</strong></li>
+                <li>Armor: Sharp 87%, Blunt 35%, Heat 41%</li>
+            </ul>
+        </td>
+    </tr>
+
+    <!-- DRAGONSLAYER ARMOR -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/SkunkArmor.png" alt="Dragonslayer Armor">
+        </td>
+        <td class="cell-description">
+            <h3>Dragonslayer Armor</h3>
+            <p>Firefighter equipment adapted to Marine armor frame with a built-in <strong>Firefoam popper</strong>. When triggered, a burst of fire-retardant foam covers a wide circle. Slightly less protective than standard Marine armor against physical damage.</p>
+            <div><span class="tag tag-research">Requires: Firefoam + Powered Armor</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">120</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">20</td><td class="material">Steel</td><td class="icon"><span class="icon-material icon-steel"></span></td></tr>
+                <tr><td class="amount">4</td><td class="material">Component</td><td class="icon"><span class="icon-material icon-component-industrial"></span></td></tr>
+                <tr><td class="amount">70</td><td class="material">Chemfuel</td><td class="icon"><span class="icon-material icon-chemfuel"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>2 firefoam charges</strong></li>
+                <li>Refills with 30 Chemfuel</li>
+                <li><strong>Extinguishes fires</strong> in 4.9 radius</li>
+                <li>Armor: Sharp 101%, Blunt 40%, <strong>Heat 120%</strong></li>
+                <li><strong>AI auto-deploys</strong> on fire</li>
+            </ul>
+        </td>
+    </tr>
+
+    <!-- PALISADE ARMOR -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/PalisadeArmor.png" alt="Palisade Armor">
+        </td>
+        <td class="cell-description">
+            <h3>Palisade Armor</h3>
+            <p>A variant of Cataphract armor with a built-in <strong>energy shield unit</strong>. Slightly less protective than standard Cataphract armor, but makes up for it with a shield. Overwhelms ranks of ranged attackers with resistance to projectiles.</p>
+            <div><span class="tag tag-research">Requires: Shield Belt + Cataphract Armor</span></div>
+            <div><span class="tag tag-dlc">Royalty DLC</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">170</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">50</td><td class="material">Steel</td><td class="icon"><span class="icon-material icon-steel"></span></td></tr>
+                <tr><td class="amount">2</td><td class="material">Component</td><td class="icon"><span class="icon-material icon-component-industrial"></span></td></tr>
+                <tr><td class="amount">6</td><td class="material">Advanced component</td><td class="icon"><span class="icon-material icon-component-spacer"></span></td></tr>
+                <tr><td class="amount">50</td><td class="material">Uranium</td><td class="icon"><span class="icon-material icon-uranium"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Shield Core</td><td class="icon"><span class="icon-material icon-broadshield-core"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>Energy shield: 2 max</strong></li>
+                <li>Recharge: 0.17/s</li>
+                <li><strong>Reduced flammability</strong></li>
+                <li>Armor: Sharp 120%, Blunt 55%, Heat 75%</li>
+            </ul>
+        </td>
+    </tr>
+
+    <!-- SHELTER ARMOR -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/PalisadeArmor.png" alt="Shelter Armor">
+        </td>
+        <td class="cell-description">
+            <h3>Shelter Armor</h3>
+            <p>A variant of Cataphract armor with a deployable <strong>low-shield projector</strong>. Deployed, it generates a circular shield that allows bullets out but not in. Designed to last only a short time before burning out.</p>
+            <div><span class="tag tag-research">Requires: Shield Belt + Cataphract Armor</span></div>
+            <div><span class="tag tag-dlc">Royalty DLC</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">170</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">50</td><td class="material">Steel</td><td class="icon"><span class="icon-material icon-steel"></span></td></tr>
+                <tr><td class="amount">2</td><td class="material">Component</td><td class="icon"><span class="icon-material icon-component-industrial"></span></td></tr>
+                <tr><td class="amount">6</td><td class="material">Advanced component</td><td class="icon"><span class="icon-material icon-component-spacer"></span></td></tr>
+                <tr><td class="amount">50</td><td class="material">Uranium</td><td class="icon"><span class="icon-material icon-uranium"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Shield Core</td><td class="icon"><span class="icon-material icon-broadshield-core"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>Deployable shield bubble</strong></li>
+                <li>1 charge per Shield Core</li>
+                <li><strong>Allows outgoing</strong> fire</li>
+                <li><strong>Blocks incoming</strong> fire</li>
+                <li><strong>Reduced flammability</strong></li>
+                <li>Armor: Sharp 120%, Blunt 55%, Heat 75%</li>
+            </ul>
+        </td>
+    </tr>
+    
+    </tbody>
+    
+</table>
+
+<br />
+    
+<table class="feature-table">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Description</th>
+        <th>Cost</th>
+        <th>Features & Stats</th>
+    </tr>
+    </thead>
+    <tbody>    
+
+    <!-- IUDASH HELMET -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/IudashHelmet.png" alt="Iudash Helmet">
+        </td>
+        <td class="cell-description">
+            <h3>Iudash Recon Helmet</h3>
+            <p>A high-tech armored helmet with a built-in <strong>psychic effector</strong>. Overwhelms the target's mind with terrifying perceptual distortions, driving them into a <strong>berserk state</strong>. There is a risk of brain damage.</p>
+            <div><span class="tag tag-research">Requires: Insanity Weaponry + Recon Armor</span></div>
+            <div><span class="tag tag-dlc">Anomaly DLC</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">30</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Advanced component</td><td class="icon"><span class="icon-material icon-component-spacer"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Shard</td><td class="icon"><span class="icon-material icon-shard"></span></td></tr>
+                <tr><td class="amount">75</td><td class="material">Bioferrite</td><td class="icon"><span class="icon-material icon-bioferrite"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>Psychic insanity lance</strong></li>
+                <li>1 charge per Shard</li>
+                <li>Range: 16.9</li>
+                <li><strong>Induces berserk</strong> state</li>
+                <li>30% brain damage chance</li>
+                <li>Goodwill impact: -200</li>
+                <li><strong>Cannot target</strong> psychic insanity immune</li>
+            </ul>
+        </td>
+    </tr>
+
+    <!-- ABDUCTOR HELMET -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/AbductorHelmet.png" alt="Abductor Helmet">
+        </td>
+        <td class="cell-description">
+            <h3>Abductor Marine Helmet</h3>
+            <p>A Marine armor helmet with a built-in <strong>psychic effector</strong>. Shocks the target's mind with chaotic images, blocking coherent perception and dropping them into a state of <strong>psychic shock</strong>. There is a risk of brain damage.</p>
+            <div><span class="tag tag-research">Requires: Insanity Weaponry + Powered Armor</span></div>
+            <div><span class="tag tag-dlc">Anomaly DLC</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">40</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Advanced component</td><td class="icon"><span class="icon-material icon-component-spacer"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Shard</td><td class="icon"><span class="icon-material icon-shard"></span></td></tr>
+                <tr><td class="amount">60</td><td class="material">Bioferrite</td><td class="icon"><span class="icon-material icon-bioferrite"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>Psychic shock lance</strong></li>
+                <li>1 charge per Shard</li>
+                <li>Range: 16.9</li>
+                <li><strong>Induces psychic shock</strong> state</li>
+                <li>30% brain damage chance</li>
+                <li>Goodwill impact: -200</li>
+                <li><strong>Cannot target</strong> psychic shock immune</li>
+            </ul>
+        </td>
+    </tr>
+
+    <!-- PHAROS HELMET -->
+    <tr>
+        <td class="cell-graphic">
+            <img src="../Mod/1.6/Textures/UtilityArmors/PharosHelmet.png" alt="Pharos Helmet">
+        </td>
+        <td class="cell-description">
+            <h3>Pharos Cataphract Helmet</h3>
+            <p>A heavily-armored high-tech helmet with a built-in <strong>disruptor flare launcher</strong>. The Pharos variant includes short-range deployable flares linked to an aim assist system for fast deployment.</p>
+            <div><span class="tag tag-research">Requires: Cataphract Armor + Disruptor Flares</span></div>
+            <div><span class="tag tag-dlc">Royalty + Anomaly DLCs</span></div>
+        </td>
+        <td class="cell-cost">
+            <table class="cost-table">
+                <tr><td class="amount">50</td><td class="material">Plasteel</td><td class="icon"><span class="icon-material icon-plasteel"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Advanced component</td><td class="icon"><span class="icon-material icon-component-spacer"></span></td></tr>
+                <tr><td class="amount">1</td><td class="material">Component</td><td class="icon"><span class="icon-material icon-component-industrial"></span></td></tr>
+                <tr><td class="amount">30</td><td class="material">Bioferrite</td><td class="icon"><span class="icon-material icon-bioferrite"></span></td></tr>
+            </table>
+        </td>
+        <td class="cell-stats">
+            <ul class="stats-list">
+                <li><strong>Deploy disruptor flares</strong></li>
+                <li><strong>4 charges</strong></li>
+                <li>Refills with 5 Bioferrite/charge</li>
+                <li>Range: 10</li>
+                <li>Field radius: 8.9</li>
+                <li>Duration: 30 seconds</li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
