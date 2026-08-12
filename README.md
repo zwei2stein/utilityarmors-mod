@@ -5,7 +5,21 @@ Steam workshop link: <https://steamcommunity.com/sharedfiles/filedetails/?id=360
 
 ## Quick about
 
+### Infographic
+
+[Infographics as separate page](/Publishing/features.html)
+
+![](/Publishing/features_01.png
+
+![](/Publishing/features_02.png
+
+### Steam mod page info
+
 [Steam blurb text is in this repo](/Publishing/steam.txt)
+
+![](/Publishing/armor_dragonslayer.png)
+
+![](/Publishing/armor_dragonslayer.png)
 
 ![](/Publishing/armor_dragonslayer.png)
 

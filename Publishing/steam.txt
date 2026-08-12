@@ -2,6 +2,10 @@
 
 You want to stack more utilities on your pawns? Why can a pawn have Jump pack, armor and not something else? Well, now they can!
 
+[img=https://i.imgur.com/8hvGRfA.png]
+
+[img=https://i.imgur.com/2S6aDA6.png]
+
 [h2]Features[/h2]
 
 [list]
@@ -43,6 +47,12 @@ Marine armor helmet with built-in Shard shock lance, available for crafting when
 [b]Pharos Helmet[/b]
 
 Cataphract armor helmet with built-in disruptor flare launcher, available for crafting when you research both Disruptor flares and Cataphract armor.
+
+[hr][/hr]
+
+[h2]Mod compatibility[/h2]
+
+Theese armors ARE Combat Extended compatible.
 
 [hr][/hr]
 
