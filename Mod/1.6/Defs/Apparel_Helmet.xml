@@ -18,6 +18,7 @@
         <li>InsanityWeaponry</li>
         <li>ReconArmor</li>
       </researchPrerequisites>
+      <displayPriority>140</displayPriority>
     </recipeMaker>
 
     <statBases>
@@ -38,17 +39,15 @@
       </forceEyesVisibleForRotations>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    
     <tradeTags>
       <li>Armor</li>
     </tradeTags>
-    <recipeMaker>
-      <displayPriority>140</displayPriority>
-    </recipeMaker>
 
     <verbs>
       <li>
         <verbClass>Verb_CastTargetEffectLances</verbClass>
-        <label>iudash recon helmet</label>
+        <label>iudash psychic insanity</label>
         <hasStandardCommand>true</hasStandardCommand>
         <targetable>true</targetable>
         <onlyManualCast>True</onlyManualCast>
@@ -107,6 +106,7 @@
         <li>InsanityWeaponry</li>
         <li>PoweredArmor</li>
       </researchPrerequisites>
+      <displayPriority>150</displayPriority>
     </recipeMaker>
 
     <statBases>
@@ -129,14 +129,14 @@
       </forceEyesVisibleForRotations>
     </apparel>
 
-    <recipeMaker>
-      <displayPriority>150</displayPriority>
-    </recipeMaker>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
 
     <verbs>
       <li>
         <verbClass>Verb_CastTargetEffectLances</verbClass>
-        <label>abductor marine helmet</label>
+        <label>abductor psychic shock</label>
         <hasStandardCommand>true</hasStandardCommand>
         <targetable>true</targetable>
         <onlyManualCast>True</onlyManualCast>
@@ -211,6 +211,10 @@
     <apparel>
       <wornGraphicPath>UtilityArmors/PharosHelmet</wornGraphicPath>
     </apparel>
+
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
 
     <comps>
       <li Class="CompProperties_DisruptorFlarePack">

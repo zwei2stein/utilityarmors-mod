@@ -28,6 +28,11 @@
       <scoreOffset>4</scoreOffset>
       <wornGraphicPath>UtilityArmors/SkunkArmor</wornGraphicPath>
     </apparel>
+
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    
     <costList>
       <Plasteel>120</Plasteel>
       <ComponentIndustrial>3</ComponentIndustrial>
@@ -76,14 +81,21 @@
       <displayPriority>125</displayPriority>
     </recipeMaker>
     <graphicData>
+      <!-- TODO: functional placeholder -->
       <texPath>UtilityArmors/SkunkArmor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <tickerType>Normal</tickerType>
     <apparel>
       <scoreOffset>4</scoreOffset>
+      <!-- TODO: functional placeholder -->
       <wornGraphicPath>UtilityArmors/SkunkArmor</wornGraphicPath>
     </apparel>
+
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    
     <costList>
       <Plasteel>120</Plasteel>
       <Steel>20</Steel>
@@ -115,7 +127,7 @@
         <wickTicks>0</wickTicks>
         <destroyThingOnExplosionSize>9999</destroyThingOnExplosionSize><!--hack to not destroy on explosion-->
       </li>
-      <li Class="CompProperties_AIUSablePack">
+      <li Class="CompProperties_AIUsablePack">
         <compClass>CompFirefoamPack</compClass>
         <checkInterval>60</checkInterval>
       </li>
@@ -161,6 +173,7 @@
         <li>ShieldBelt</li>
         <li>CataphractArmor</li>
       </researchPrerequisites>
+      <displayPriority>135</displayPriority>
     </recipeMaker>
     <graphicData>
       <texPath>UtilityArmors/PalisadeArmor</texPath>
@@ -170,15 +183,14 @@
       <scoreOffset>4</scoreOffset>
       <wornGraphicPath>UtilityArmors/PalisadeArmor</wornGraphicPath>
     </apparel>
-    <comps>
-      <li Class="CompProperties_Shield" />
-    </comps>
+    
     <tradeTags>
       <li>Armor</li>
     </tradeTags>
-    <recipeMaker>
-      <displayPriority>135</displayPriority>
-    </recipeMaker>
+    
+    <comps>
+      <li Class="CompProperties_Shield" />
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="ApparelArmorCataphractBase" MayRequire="Ludeon.RimWorld.Royalty">
@@ -206,15 +218,23 @@
         <li>ShieldBelt</li>
         <li>CataphractArmor</li>
       </researchPrerequisites>
+      <displayPriority>135</displayPriority>
     </recipeMaker>
     <graphicData>
+      <!-- TODO: similar purpose, same armor grade, reused texture -->
       <texPath>UtilityArmors/PalisadeArmor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
       <scoreOffset>4</scoreOffset>
+      <!-- TODO: similar purpose, same armor grade, reused texture -->
       <wornGraphicPath>UtilityArmors/PalisadeArmor</wornGraphicPath>
     </apparel>
+
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    
     <comps>
       <li Class="CompProperties_ApparelReloadable">
         <maxCharges>1</maxCharges>
@@ -238,12 +258,6 @@
         <onlyManualCast>True</onlyManualCast>
       </li>
     </verbs>
-    <tradeTags>
-      <li>Armor</li>
-    </tradeTags>
-    <recipeMaker>
-      <displayPriority>135</displayPriority>
-    </recipeMaker>
   </ThingDef>
 
 </Defs>
